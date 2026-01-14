@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhdam Card Sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>ENHDAM CARD SOUND</h1>
+  <p>Creative Silver Card Mode</p>
+</header>
+
+<section class="cards">
+  <div class="card silver">
+
+    <audio id="audio"></audio>
+
+    <div class="controls">
+      <button onclick="play()">▶ تشغيل</button>
+      <button onclick="stop()">⏹ إيقاف</button>
+      <button onclick="toggleLoop()">🔁 تكرار</button>
+    </div>
+
+    <div class="controls">
+      <input type="file" accept="audio/*" onchange="loadFile(event)">
+    </div>
+
+    <div class="controls">
+      <button onclick="record()">🎙 تسجيل</button>
+      <button onclick="stopRecord()">⏹ إنهاء</button>
+    </div>
+
+    <div class="sliders">
+      <label>🔊 Volume</label>
+      <input type="range" min="0" max="5" step="0.1" value="1" oninput="setVolume(this.value)">
+
+      <label>🎚 Bass</label>
+      <input type="range" min="0" max="30" value="0" oninput="setBass(this.value)">
+
+      <label>🌊 Echo</label>
+      <input type="range" min="0" max="1" step="0.1" value="0" oninput="setEcho(this.value)">
+
+      <label>🏛 Reverb</label>
+      <input type="range" min="0" max="1" step="0.1" value="0" oninput="setReverb(this.value)">
+    </div>
+
+    <button class="danger" onclick="boost()">🔥 ENHDAM BOOST</button>
+
+  </div>
+</section>
+
+<footer>© 2026 Enhdam Card Sound</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
